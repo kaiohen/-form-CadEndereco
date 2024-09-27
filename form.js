@@ -22,3 +22,27 @@ const preencherFormulario = (endereco) => {
   document.getElementById("Complemento").value = endereco.Complemento;
   document.getElementById("uf").value = endereco.uf;
 };
+// função de consumo de API viaCep
+
+// explicar dps
+const pesquisarCep = async () => {
+  limparFormulario();
+  const url = `https://viacep.com.br/ws/${CEP.value}/json/`;
+  if (cepValido(CEP.value)) {
+    const dados = await fetch(url);
+    // explicar dps
+    const addres = await dados.json();
+    // explicar dps
+
+    // explicar dps
+    if (addres.hasOwnProperty("erro")) {
+      alert("Cep não encontrado");
+    } else {
+      preencherFormulario(addres);
+    }
+  } else {
+    alert("CEP incorreto!");
+  }
+};
+//adiciona escutador para executar consumo de API da ViaCep
+document.getElementById("CEP").addEventListener("focusout", pesquisarCep);
