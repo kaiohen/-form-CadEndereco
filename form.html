@@ -20,14 +20,14 @@
         <label for="inputZip" class="form-label">CEP</label>
         <input type="text" class="form-control" id="CEP" />
       </div>
-
-      <div class="col-6">
+      <div class="row">
+      <div class="col-md-6">
         <label for="inputAddress" class="form-label">Rua:</label>
         <input
           type="text"
           class="form-control"
           id="logradouro"
-          placeholder="Rua de exemplo"
+          placeholder="Nome da Rua"
         />
       </div>
       <div class="col-6">
@@ -36,7 +36,7 @@
           type="number"
           class="form-control"
           id="numero"
-          placeholder="N°190"
+          placeholder="Ex: N°190"
         />
       </div>
 
@@ -45,7 +45,7 @@
         <input type="text" class="form-control" id="bairro" />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-6">
         <label for="inputCity" class="form-label">Cidade:</label>
         <input type="text" class="form-control" id="localidade" />
       </div>
@@ -56,17 +56,16 @@
           type="text"
           class="form-control"
           id="Complemento"
-          placeholder="Casa, Bairro, etc."
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-6">
         <label for="inputState" class="form-label">Estado:</label>
         <input type="text" id="uf" class="form-control" />
       </div>
-      <br />
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Pesquisar</button>
+     </div>
+      <div class="col-md-6">
+        <button id="button" type="submit" class="btn btn-secondary">Pesquisar</button>
       </div>
     </div>
     <script src="form.js"></script>
