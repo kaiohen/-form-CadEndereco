@@ -19,7 +19,7 @@ const preencherFormulario = (endereco) => {
   document.getElementById("logradouro").value = endereco.logradouro;
   document.getElementById("bairro").value = endereco.bairro;
   document.getElementById("localidade").value = endereco.localidade;
-  document.getElementById("Complemento").value = endereco.Complemento;
+  document.getElementById("Complemento").value = endereco.complemento;
   document.getElementById("uf").value = endereco.uf;
 };
 // função de consumo de API viaCep
@@ -45,4 +45,4 @@ const pesquisarCep = async () => {
   }
 };
 //adiciona escutador para executar consumo de API da ViaCep
-document.getElementById("CEP").addEventListener("focusout", pesquisarCep);
+document.getElementById("button").addEventListener("click", pesquisarCep);
