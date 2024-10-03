@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 50%; 
-    background-color: #c87871;
+    background-color: #ffffff;
     border: 5px solid #31445d;
     margin: 10vh auto;
     box-shadow: 0 0 100px #6d5c6980;
