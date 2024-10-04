@@ -80,3 +80,7 @@ const preencherFormulario = (endereco) => {
 - **.json()** =  retorna o valor em JavaScript
 
 A função agrupa todas as outras. Assim que o usuário digita no campo o _CEP_, a constante _cepValido_ valida e envia os dados para a API, transformando a resposta em _JSON_, assim preenchendo o formulário.
+
+# Imagem do projeto
+
+![image](https://github.com/user-attachments/assets/c13cc60f-98bd-46cf-8eb4-6cc43d3370cd)
