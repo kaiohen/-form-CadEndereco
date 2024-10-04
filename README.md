@@ -27,8 +27,8 @@ const limparFormulario = () => {
 -  **document.getElementById** = pega um elemento pelo _ID_
 - **value** = pega o valor daquele elemento
 
- Este codigo está limpando o formulario assim como o nome sugere, caso o usuário registre um _CEP_ e tenha a intenção de colocar um outro a função reseta os campos inputs deixando eles vazios denovo para um novo _CEP_ ser inserido.
-
+ Este código está limpando o formulário, assim como o nome sugere. Caso o usuário registre um CEP e tenha a intenção de inserir outro, a função reseta os campos de entrada, deixando-os vazios novamente para um novo CEP ser inserido.
+ 
 ~~~ JavaScript
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
 ~~~
@@ -40,9 +40,9 @@ const eNumero = (numero) => /^[0-9]+$/.test(numero);
 ~~~ JavaScript
 const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 ~~~
-**.length** = retorna o numero de caracteres
+- **.length** = retorna o numero de caracteres
 
-Constante _cepValido_ verifica o tamanho do cep digitado e compara com a função _eNumero_ caso ambos requisitos forem verdadeiros retorna true, caso contrario false.
+A constante cepValido verifica o tamanho do CEP digitado e compara com a função eNumero. Caso ambos os requisitos sejam verdadeiros, retorna true, caso contrário, false.
 
 ~~~ JavaScript
 const preencherFormulario = (endereco) => {
@@ -54,7 +54,7 @@ const preencherFormulario = (endereco) => {
 };
 ~~~
 
- Essa função defini o valor dos _IDs_ como endereco.logradouro para preencher o formulario utilizando os dados da API.
+ Essa função defini o valor dos _IDs_ como endereco. para preencher o formulario utilizando os dados da API.
 
 ~~~ JavaScript
  const pesquisarCep = async () => {
@@ -73,7 +73,10 @@ const preencherFormulario = (endereco) => {
   }
 };
 ~~~
-**async** = torna a função assincrona, assim ela pode esperar por uma ação para ser ativada sem travar o resto do codigo
-**await** = espera pela resposta da função a assincrona
-**fetch(url)** = busca ou envia dados da API
-**addres** = contem o resultado da busca de dados da API
+- **async** = torna a função assincrona, assim ela pode esperar por uma ação para ser ativada sem travar o resto do codigo
+- **await** = espera pela resposta da função a assincrona
+- **fetch(url)** = busca ou envia dados da API
+- **addres** = contem o resultado da busca de dados da API
+- **.json()** =  retorna o valor em JavaScript
+
+A função agrupa todas as outras. Assim que o usuário digita no campo o _CEP_, a constante _cepValido_ valida e envia os dados para a API, transformando a resposta em _JSON_, assim preenchendo o formulário.
