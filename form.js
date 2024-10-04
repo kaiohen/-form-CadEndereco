@@ -24,17 +24,17 @@ const preencherFormulario = (endereco) => {
 };
 // função de consumo de API viaCep
 
-// explicar dps
+// Função assíncrona que pesquisa um CEP na API e exibe os dados no formulário
 const pesquisarCep = async () => {
   limparFormulario();
   const url = `https://viacep.com.br/ws/${CEP.value}/json/`;
   if (cepValido(CEP.value)) {
     const dados = await fetch(url);
-    // explicar dps
+    // Busca dados na API
     const addres = await dados.json();
-    // explicar dps
+    //  Transforma a resposta da API em um objeto JavaScript utilizável
 
-    // explicar dps
+    // Verifica se há um erro nos dados 
     if (addres.hasOwnProperty("erro")) {
       alert("Cep não encontrado");
     } else {
